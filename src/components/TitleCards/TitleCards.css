@@ -8,10 +8,11 @@
 .card-list {
   display: flex;
   gap: 10px;
-  overflow-x: scroll;
+  overflow: hidden;
 }
 .card-list ::-webkit-scrollbar {
   display: none;
+  overflow-x: hidden;
 }
 .card-list img {
   width: 240px;

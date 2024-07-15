@@ -17,9 +17,8 @@ const Home = () => {
         <div className="hero-caption">
           <img src={hero_title} alt="" className="caption-img" />
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
-            ratione repudiandae nulla eaque ea possimus exercitationem,
-            quibusdam atque nemo rerum.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ratione repudiandae nulla
+            eaque ea possimus exercitationem, quibusdam atque nemo rerum.
           </p>
           <div className="hero-btns">
             <button className="btn">

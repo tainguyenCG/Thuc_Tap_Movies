@@ -1,4 +1,3 @@
-import React from "react";
 import "./Footer.css";
 import youtube_icon from "../../assets/youtube_icon.png";
 import twitter_icon from "../../assets/twitter_icon.png";
@@ -28,7 +27,7 @@ const Footer = () => {
         <li>Corporate Information</li>
         <li>Contact Us</li>
       </ul>
-      <p className="copyright-text">© 1997-2023 Nextflix, Inc.</p>
+      <p className="copyright-text">© 1997-2024 Nextflix, Inc.</p>
     </div>
   );
 };

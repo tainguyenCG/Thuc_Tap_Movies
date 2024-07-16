@@ -27,7 +27,7 @@ const Footer = () => {
         <li>Corporate Information</li>
         <li>Contact Us</li>
       </ul>
-      <p className="copyright-text">© 1997-2024 Nextflix, Inc.</p>
+      <p className="copyright-text">Thực Tập Cơ Sở. Gmail: Nguyenthanhtai0392k3@gmail.com</p>
     </div>
   );
 };

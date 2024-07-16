@@ -19,6 +19,12 @@ const search_content = (
   </div>
 );
 
+const fake_content = (
+  <div>
+    <p>Chức năng không hoạt động</p>
+  </div>
+);
+
 const Navbar = () => {
   const navRef = useRef();
   useEffect(() => {
@@ -36,18 +42,20 @@ const Navbar = () => {
       <div className="navbar-left">
         <img src={logo} alt="" />
         <ul>
-          <li>Home</li>
           <li>
-            <Link to="/tvshows">TV Shows</Link>
+            <Link to="/movies" className="custom_link">
+              Movies
+            </Link>
           </li>
           <li>
-            <Link to="/movies">Movies</Link>
+            <Link to="/tvshows" className="custom_link">
+              TV Shows
+            </Link>
           </li>
           <li>
-            <Link to="/newpopular">New & Popular</Link>
-          </li>
-          <li>
-            <Link to="/mylist">My List</Link>
+            <Link to="/news" className="custom_link">
+              New & Popular
+            </Link>
           </li>
         </ul>
       </div>

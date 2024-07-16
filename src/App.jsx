@@ -7,6 +7,9 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Movies from "./pages/Movies/Movies";
+import News from "./pages/News/News";
+import TVShows from "./pages/TVShows/TVShows";
 
 const App = () => {
   const navigate = useNavigate();
@@ -27,6 +30,9 @@ const App = () => {
       <ToastContainer theme="dark" />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/movies" element={<Movies />} />
+        <Route path="/TVShows" element={<TVShows />} />
+        <Route path="/news" element={<News />} />
         <Route path="/login" element={<Login />} />
         <Route path="/player/:id" element={<Player />} />
       </Routes>

@@ -1,17 +1,12 @@
 import { useEffect, useRef, useState } from "react";
-import "./TitleCards.css";
-
+import "./News.css";
+import back_arrow_icon from "../../assets/back_arrow_icon.png";
+import { useNavigate, useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-const TitleCards = ({ title, category }) => {
+const News = ({ title, category }) => {
   const [apiData, setApiData] = useState([]);
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
+  const navigate = useNavigate();
   const cardsRef = useRef();
   const options = {
     method: "GET",
@@ -29,7 +24,7 @@ const TitleCards = ({ title, category }) => {
   useEffect(() => {
     fetch(
       `https://api.themoviedb.org/3/movie/${
-        category ? category : "now_playing"
+        category ? category : "upcoming"
       }?language=en-US&page=1`,
       options
     )
@@ -39,12 +34,20 @@ const TitleCards = ({ title, category }) => {
     cardsRef.current.addEventListener("wheel", handleWheel);
   }, []);
   return (
-    <div className="title-cards">
-      <h2>{title ? title : "Popular on Netflix"}</h2>
-      <div className="card-list" ref={cardsRef}>
+    <div className="News-cards">
+      <img
+        src={back_arrow_icon}
+        alt=""
+        onClick={() => {
+          navigate("/");
+        }}
+        className="img3"
+      />
+      <h2>{title ? title : "New & Popular movie"}</h2>
+      <div className="News-list" ref={cardsRef}>
         {apiData.map((card, index) => {
           return (
-            <Link to={`/player/${card.id}`} className="card" key={index}>
+            <Link to={`/player/${card.id}`} className="News" key={index}>
               <img src={`https://image.tmdb.org/t/p/w500` + card.backdrop_path} alt="" />
               <p>{card.original_title}</p>
             </Link>
@@ -55,4 +58,4 @@ const TitleCards = ({ title, category }) => {
   );
 };
 
-export default TitleCards;
+export default News;

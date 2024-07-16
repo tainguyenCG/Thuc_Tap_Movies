@@ -96,3 +96,8 @@
     gap: 10px;
   }
 }
+
+.custom_link {
+  color: white;
+  text-decoration: none;
+}

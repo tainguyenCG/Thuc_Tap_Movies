@@ -7,8 +7,13 @@ import play_icon from "../../assets/play_icon.png";
 import info_icon from "../../assets/info_icon.png";
 import TitleCards from "../../components/TitleCards/TitleCards";
 import Footer from "../../components/Footer/Footer";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
+  const handlep = () => {
+    navigate("/player/1022789");
+  };
   return (
     <div className="home">
       <Navbar />
@@ -21,7 +26,7 @@ const Home = () => {
             eaque ea possimus exercitationem, quibusdam atque nemo rerum.
           </p>
           <div className="hero-btns">
-            <button className="btn">
+            <button className="btn" onClick={handlep}>
               <img src={play_icon} alt="" />
               Play
             </button>
